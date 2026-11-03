@@ -1,0 +1,18 @@
+/* 長押しメニュー・テキスト選択を抑止（買い物中の誤操作防止） */
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* iOS Safari では user-select:none が入力欄にも効いて入力できなくなるため例外にする */
+.no-select input,
+.no-select textarea {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+/* 連続タップ時のダブルタップズームを防ぐ */
+.item-card {
+    touch-action: manipulation;
+}
