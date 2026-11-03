@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>買い物リスト & ストック管理 v1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>買い物リスト & ストック管理 v1.1</title>
 
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen pb-24 no-select">
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-32 no-select">
 
     <!-- Header Navigation -->
     <header class="bg-white shadow-sm sticky top-0 z-20">
@@ -96,14 +96,14 @@
     </main>
 
     <!-- Bottom Floating Cart Bar -->
-    <div id="cartBar" class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg p-4 transition-transform transform translate-y-full duration-300 z-30">
+    <div id="cartBar" class="cart-bar fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg px-4 pt-4 transition-transform transform translate-y-full duration-300 z-30">
         <div class="max-w-2xl mx-auto flex items-center justify-between gap-3">
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
                 <div class="text-xs text-slate-500 font-medium">選択中の購入予定</div>
                 <div id="cartSummary" class="text-sm font-bold text-slate-800 truncate">なし</div>
             </div>
-            <button id="commitPurchaseBtn" type="button" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md flex items-center gap-2">
-                <i data-lucide="check" class="w-5 h-5"></i> 買いました！
+            <button id="commitPurchaseBtn" type="button" class="shrink-0 whitespace-nowrap bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md flex items-center gap-2">
+                <i data-lucide="check" class="w-5 h-5"></i> 購入
             </button>
         </div>
     </div>

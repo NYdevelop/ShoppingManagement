@@ -16,3 +16,8 @@
 .item-card {
     touch-action: manipulation;
 }
+
+/* 下部カートバー：ホームインジケータ（iOS等）に重ならないよう下余白を確保 */
+.cart-bar {
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+}
